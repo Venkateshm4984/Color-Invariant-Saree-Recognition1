@@ -1,0 +1,6 @@
+{
+  "name": "Color-Invariant Saree Design Recognition",
+  "description": "Production AI/ML Computer Vision system classifying saree design patterns, borders, and motifs independently of fabric color with Grad-CAM explainability and color robustness stress-testing.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

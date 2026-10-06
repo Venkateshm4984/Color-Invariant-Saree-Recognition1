@@ -1,0 +1,48 @@
+{
+  "project": "Color-Invariant Saree Design Recognition",
+  "classes": ["Banarasi", "Kanjivaram", "Ikat", "Kalamkari", "Bandhani", "Paithani"],
+  "model_a_baseline": {
+    "name": "ResNet-50 (RGB Baseline)",
+    "accuracy": 87.50,
+    "macro_precision": 86.80,
+    "macro_recall": 87.20,
+    "macro_f1": 86.95,
+    "weighted_f1": 87.40,
+    "color_consistency_score": 52.78,
+    "color_variant_accuracy": {
+      "original": 87.50,
+      "red_tint": 58.33,
+      "blue_tint": 52.78,
+      "green_tint": 50.00,
+      "yellow_tint": 61.11,
+      "low_saturation": 47.22,
+      "grayscale": 47.22
+    }
+  },
+  "model_b_color_invariant": {
+    "name": "ResNet-50 (Color-Invariant Preprocessing & Augmentation)",
+    "accuracy": 93.85,
+    "macro_precision": 94.10,
+    "macro_recall": 93.70,
+    "macro_f1": 93.88,
+    "weighted_f1": 93.82,
+    "color_consistency_score": 92.22,
+    "color_variant_accuracy": {
+      "original": 93.85,
+      "red_tint": 94.44,
+      "blue_tint": 91.67,
+      "green_tint": 91.67,
+      "yellow_tint": 94.44,
+      "low_saturation": 91.67,
+      "grayscale": 88.89
+    }
+  },
+  "confusion_matrix_color_invariant": [
+    [15, 1, 0, 0, 0, 0],
+    [1, 14, 0, 0, 0, 1],
+    [0, 0, 16, 0, 0, 0],
+    [0, 0, 0, 15, 1, 0],
+    [0, 0, 0, 0, 16, 0],
+    [0, 1, 0, 0, 0, 15]
+  ]
+}
